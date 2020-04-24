@@ -55,6 +55,20 @@
     				 allTransactionsEl[allTransactionsEl.length  - 1].remove()
 				}
 			}
+
+			for(var i = 0; i < data.actions.length; i++)
+			{
+				var actions = document.getElementById("actions");
+				var li = document.createElement("li")
+				li.appendChild(document.createTextNode(data.actions[i].action_name +data.actions[i].action_policy));
+				li.setAttribute("class", "graph-info-medium");
+				actions.insertBefore(li, actions.firstChild);
+
+				var allActionsEl =  actions.getElementsByTagName("li")
+				if(allActionsEl.length > 13){
+    				 allActionsEl[allActionsEl.length  - 1].remove()
+				}
+			}
         };
 
         chatSocket.onclose = function(e) {
@@ -141,16 +155,16 @@
 
         <div class="col-sm-3 col-lg-3">
       		<div class="dash-unit">
-	      		<dtitle>Player Two</dtitle>
+	      		<dtitle>Player Three</dtitle>
 	      		<hr>
 	      		<div class="cont">
-					<p><bold id="balance3">879 </bold> <small>Nano</small> | <ok> Balance</ok></p>
-					<br>
-					<p><bold id="betting3">1 </bold> <small>Nano</small> | <bad>Betting</bad></p>
-					<br>
-					<p><bold id="gains3">432 </bold> <small>Nano</small> | Gains (Loss)</p>
-					<br>
-					<p><span aria-hidden="true" class="li_user fs1" id="address3"> nano_fhaijfafdns</span></p>
+					<!--<p><bold id="balance3">879 </bold> <small>Nano</small> | <ok> Balance</ok></p>-->
+					<!--<br>-->
+					<!--<p><bold id="betting3">1 </bold> <small>Nano</small> | <bad>Betting</bad></p>-->
+					<!--<br>-->
+					<!--<p><bold id="gains3">432 </bold> <small>Nano</small> | Gains (Loss)</p>-->
+					<!--<br>-->
+					<!--<p><span aria-hidden="true" class="li_user fs1" id="address3"> nano_fhaijfafdns</span></p>-->
 				</div>
 			</div>
         </div>
@@ -160,9 +174,9 @@
 	      		<dtitle>Current Pot</dtitle>
 	      		<hr>
 	      		<div class="cont">
-					<p><img src="{% static "images/pot.png" %}" alt=""> <bold id="currentpot">1001</bold>| Nano</p>
+					<p><img src="{% static "images/pot.png" %}" alt=""> <bold id="currentpot">1001</bold>| Nano
 				</div>
-			</div>
+				</div>
         </div>
 
 		  <div class="col-sm-3 col-lg-3">
@@ -170,7 +184,7 @@
 	      		<dtitle>Total Nano Transfered</dtitle>
 	      		<hr>
 	      		<div class="cont">
-					<p><img src="{% static "images/total.png"  %}" alt=""> <bold id="totaltransfered">100</bold> | Nano</p>
+					<p><img src="{% static "images/total.png"  %}" alt=""> <bold id="totaltransfered"></bold> | Nano</p>
 				</div>
 			</div>
         </div>
@@ -180,7 +194,7 @@
 	      		<dtitle>Total Transactions</dtitle>
 	      		<hr>
 	      		<div class="cont">
-					<p><img src="{% static "images/transactions.png"  %}" alt=""> <bold id="totaltransactions">1001</bold></p>
+					<p><img src="{% static "images/transactions.png"  %}" alt=""> <bold id="totaltransactions"></bold></p>
 				</div>
 			</div>
         </div>
@@ -194,16 +208,30 @@
 			</div>
         </div>
 
-      </div>
+		<div class="col-sm-6 col-lg-6">
       		<div class="dash-unit">
       		<dtitle>Transactions</dtitle>
+				<hr>
 			      <ul id="transactions">
 			        <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
 					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
 					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
 				  </ul>
 			</div>
+		</div>
+			<div class="col-sm-6 col-lg-6">
+      		<div class="dash-unit">
+      		<dtitle>Actions and Polices</dtitle>
+				<hr>
+			      <ul id="actions">
+			        <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+				  </ul>
+			</div>
+		</div>
 	</div>
+		      </div>
 	<div id="footerwrap">
       	<footer class="clearfix"></footer>
       	<div class="container">

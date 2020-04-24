@@ -22,6 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'wr2dp5b58^jwx4ex3+jiis+zs=vny3kwps41eq4+!vqwl8!lun'
 
+NANOTOKEN_ENDPOINT = os.environ['ST__NANOTOKEN_ENDPOINT']
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

@@ -3,6 +3,9 @@ from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 import random
 
+from .models import Account
+from .models import GameState
+
 class MessageConsumer(WebsocketConsumer):
     def connect(self):
         async_to_sync(self.channel_layer.group_add)(
@@ -11,6 +14,7 @@ class MessageConsumer(WebsocketConsumer):
         )
 
         self.accept()
+        self.sync_data()
 
     def disconnect(self, close_code):
         async_to_sync(self.channel_layer.group_discard)(
@@ -34,36 +38,44 @@ class MessageConsumer(WebsocketConsumer):
     def on_message(self, event):
         message = event['message']
 
-        ## Do work with backend here
-        message["balance"] = random.randrange(0, 100, 2)
+        device = message["device"]
+        token = message["token"]
+        application = message["application"]
+        action_type = message["type"]
 
-        playerone = {}
-        playerone["balance"] = random.randrange(0, 100, 2)
-        playerone["betting"] = random.randrange(0, 100, 2)
-        playerone["gains"] = random.randrange(0, 100, 2)
-        playerone["address"] = random.randrange(0, 100, 2)
+        event = Event(application, device, token)
 
-        playertwo = {}
-        playertwo["balance"] = random.randrange(0, 100, 2)
-        playertwo["betting"] = random.randrange(0, 100, 2)
-        playertwo["gains"] = random.randrange(0, 100, 2)
-        playertwo["address"] = random.randrange(0, 100, 2)
-
-        playerthree = {}
-        playerthree["balance"] = random.randrange(0, 100, 2)
-        playerthree["betting"] = random.randrange(0, 100, 2)
-        playerthree["gains"] = random.randrange(0, 100, 2)
-        playerthree["address"] = random.randrange(0, 100, 2)
-
-        transaction = {}
-        transaction["from"] = "nano_fgas"
-        transaction["to"] = "nano_agfagf"
-        transaction["amount"] = random.randrange(0, 100, 2)
+        if action_type == "bet":
+            event.trigger_bet()
+        elif action_type == "cash_out":
+            event.trigger_cash_out()
+        else:
+            raise Exception("Not a valid type")
 
         self.send(text_data=json.dumps({
-            'players': [playerone, playertwo, playerthree],
-            'currentpot': random.randrange(0, 100, 2),
+            'players': [playerone, playertwo],
+            'currentpot': 0,
             'totaltransfered': random.randrange(0, 100, 2),
             'totaltransactions': random.randrange(0, 100, 2),
-            'transactions': [transaction]
+            'transactions': [""],
+            'actions': [""]
+        }))
+
+    def sync_data(self):
+        player_one_account, d = Account.objects.get_or_create(account_name="player_one")
+        player_two_account, d = Account.objects.get_or_create(account_name="player_two")
+        pot, d = Account.objects.get_or_create(account_name="pot")
+
+        Account.sync_account(player_one_account)
+        Account.sync_account(player_two_account)
+        Account.sync_account(pot)
+
+        game_state, d = GameState.objects.get_or_create(application_name="nano_poker")
+        self.send(text_data=json.dumps({
+            'players': [Account.to_dict(player_one_account), Account.to_dict(player_two_account)],
+            'currentpot': "{:0.2f}".format(pot.balance),
+            'totaltransfered': "{:0.2f}".format(game_state.total_nano_transferred),
+            'totaltransactions': "{:0.2f}".format(game_state.total_transactions),
+            'transactions': [""],
+            'actions': [""]
         }))
