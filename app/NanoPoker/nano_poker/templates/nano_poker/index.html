@@ -1,0 +1,247 @@
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nano on Tap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.min.css" %}" />
+
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+    <link href="{% static "css/font-style.css" %}"  rel="stylesheet">
+
+    <script type="text/javascript" src="{% static "js/jquery.js" %}" ></script>
+    <script type="text/javascript" src="{% static "bootstrap/js/bootstrap.min.js" %}" ></script>
+
+    <script type="text/javascript" src="{% static "js/noty/jquery.noty.js" %}" ></script>
+
+    {{ room_name|json_script:"room-name" }}
+    <script>
+        const roomName = JSON.parse(document.getElementById('room-name').textContent);
+
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/message/action'
+        );
+
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+			console.log(data)
+            for (var i = 1; i <= data.players.length; i++)
+            {
+            	document.getElementById('balance'+i.toString()).innerHTML = data.players[i-1].balance;
+            	document.getElementById('betting'+i.toString()).innerHTML = data.players[i-1].betting;
+            	document.getElementById('gains'+i.toString()).innerHTML = data.players[i-1].betting;
+            	document.getElementById('address'+i.toString()).innerHTML = data.players[i-1].betting;
+            }
+            document.getElementById('currentpot').innerHTML = data.currentpot;
+            document.getElementById('totaltransfered').innerHTML = data.totaltransfered;
+            document.getElementById('totaltransactions').innerHTML = data.totaltransactions;
+
+			for(var i = 0; i < data.transactions.length; i++)
+			{
+				var transactions = document.getElementById("transactions");
+				var li = document.createElement("li")
+				li.appendChild(document.createTextNode("From "+data.transactions[i].from +" moved "+data.transactions[i].amount+" Nano to "+data.transactions[i].to));
+				li.setAttribute("class", "graph-info-medium");
+				transactions.insertBefore(li, transactions.firstChild);
+
+				var allTransactionsEl =  transactions.getElementsByTagName("li")
+				if(allTransactionsEl.length > 13){
+    				 allTransactionsEl[allTransactionsEl.length  - 1].remove()
+				}
+			}
+
+			for(var i = 0; i < data.actions.length; i++)
+			{
+				var actions = document.getElementById("actions");
+				var li = document.createElement("li")
+				li.appendChild(document.createTextNode(data.actions[i].action_name +data.actions[i].action_policy));
+				li.setAttribute("class", "graph-info-medium");
+				actions.insertBefore(li, actions.firstChild);
+
+				var allActionsEl =  actions.getElementsByTagName("li")
+				if(allActionsEl.length > 13){
+    				 allActionsEl[allActionsEl.length  - 1].remove()
+				}
+			}
+        };
+
+        chatSocket.onclose = function(e) {
+            console.error('Socket closed unexpectedly');
+        };
+
+    </script>
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+
+
+    <!-- Google Fonts call. Font Used Open Sans & Raleway -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container-fluid" style="max-width:80%">
+        <div class="row">
+
+            <div class="col-sm-3 col-lg-3">
+                <div class="dash-unit">
+                    <dtitle>Nano On Tap</dtitle>
+                    <hr>
+                    <div class="thumbnail">
+                        <img src="{% static "images/face80x80.jpg" %}" alt="Marcel Newman" class="img-circle">
+                    </div>
+                    <h1>Nano On Tap</h1>
+                    <h3>Control the flow.</h3>
+                    <br>
+                    <!--<div class="info-user">-->
+                    <!--<span aria-hidden="true" class="li_user fs1"></span>-->
+                    <!--<span aria-hidden="true" class="li_settings fs1"></span>-->
+                    <!--<span aria-hidden="true" class="li_mail fs1"></span>-->
+                    <!--<span aria-hidden="true" class="li_key fs1"></span>-->
+                    <!--</div>-->
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-lg-3">
+                <div class="dash-unit">
+                    <dtitle>Player One</dtitle>
+                    <hr>
+                    <div class="cont">
+                        <p>
+                            <bold id="balance1">879</bold> <small> Nano</small> |
+                            <ok> Balance</ok>
+                        </p>
+                        <br>
+                        <p>
+                            <bold id="betting1">1 </bold> <small>Nano</small> |
+                            <bad>Betting</bad>
+                        </p>
+                        <br>
+                        <p>
+                            <bold id="gains1">432 </bold> <small>Nano</small> | Gains (Loss)</p>
+                        <br>
+						<p><span aria-hidden="true" class="li_user fs1" id="address1"> nano_fhaijfafdns</span></p>
+				</div>
+			</div>
+        </div>
+
+	  <!-- LAST MONTH REVENUE -->
+        <div class="col-sm-3 col-lg-3">
+      		<div class="dash-unit">
+	      		<dtitle>Player Two</dtitle>
+	      		<hr>
+	      		<div class="cont">
+					<p><bold id="balance2">879 </bold> <small>Nano</small> | <ok> Balance</ok></p>
+					<br>
+					<p><bold id="betting2">1 </bold> <small>Nano</small> | <bad>Betting</bad></p>
+					<br>
+					<p><bold id="gains2">432 </bold> <small>Nano</small> | Gains (Loss)</p>
+					<br>
+					<p><span aria-hidden="true" class="li_user fs1" id="address2"> nano_fhaijfafdns</span></p>
+				</div>
+
+			</div>
+        </div>
+
+        <div class="col-sm-3 col-lg-3">
+      		<div class="dash-unit">
+	      		<dtitle>Player Three</dtitle>
+	      		<hr>
+	      		<div class="cont">
+					<!--<p><bold id="balance3">879 </bold> <small>Nano</small> | <ok> Balance</ok></p>-->
+					<!--<br>-->
+					<!--<p><bold id="betting3">1 </bold> <small>Nano</small> | <bad>Betting</bad></p>-->
+					<!--<br>-->
+					<!--<p><bold id="gains3">432 </bold> <small>Nano</small> | Gains (Loss)</p>-->
+					<!--<br>-->
+					<!--<p><span aria-hidden="true" class="li_user fs1" id="address3"> nano_fhaijfafdns</span></p>-->
+				</div>
+			</div>
+        </div>
+
+        <div class="col-sm-3 col-lg-3">
+			<div class="half-unit">
+	      		<dtitle>Current Pot</dtitle>
+	      		<hr>
+	      		<div class="cont">
+					<p><img src="{% static "images/pot.png" %}" alt=""> <bold id="currentpot">1001</bold>| Nano
+				</div>
+				</div>
+        </div>
+
+		  <div class="col-sm-3 col-lg-3">
+			<div class="half-unit">
+	      		<dtitle>Total Nano Transfered</dtitle>
+	      		<hr>
+	      		<div class="cont">
+					<p><img src="{% static "images/total.png"  %}" alt=""> <bold id="totaltransfered"></bold> | Nano</p>
+				</div>
+			</div>
+        </div>
+
+		  <div class="col-sm-3 col-lg-3">
+			<div class="half-unit">
+	      		<dtitle>Total Transactions</dtitle>
+	      		<hr>
+	      		<div class="cont">
+					<p><img src="{% static "images/transactions.png"  %}" alt=""> <bold id="totaltransactions"></bold></p>
+				</div>
+			</div>
+        </div>
+		  <div class="col-sm-3 col-lg-3">
+			<div class="half-unit">
+	      		<dtitle>Total Fees</dtitle>
+	      		<hr>
+	      		<div class="cont">
+					<p><img src="{% static "images/free.png"  %}" alt=""> <bold>0</bold> | Nano</p>
+				</div>
+			</div>
+        </div>
+
+		<div class="col-sm-6 col-lg-6">
+      		<div class="dash-unit">
+      		<dtitle>Transactions</dtitle>
+				<hr>
+			      <ul id="transactions">
+			        <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+				  </ul>
+			</div>
+		</div>
+			<div class="col-sm-6 col-lg-6">
+      		<div class="dash-unit">
+      		<dtitle>Actions and Polices</dtitle>
+				<hr>
+			      <ul id="actions">
+			        <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+					  <li class="graph-info-medium">Player One moved 5 Nano to pot</li>
+				  </ul>
+			</div>
+		</div>
+	</div>
+		      </div>
+	<div id="footerwrap">
+      	<footer class="clearfix"></footer>
+      	<div class="container">
+      		<div class="row">
+      			<div class="col-sm-12 col-lg-12">
+      			<p><img src="{% static "images/logo.png" %}" alt=""></p>
+      			</div>
+      		</div>
+      	</div>
+	</div>
+
+</body>
+</html>
