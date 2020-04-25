@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="971417ff-9896-4dfc-bb7d-2107a266b338" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NanoPoker.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/NanoPoker/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/NanoPoker/routing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/NanoPoker/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/NanoPoker/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/NanoPoker/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/consumers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/handle_event.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/migrations/0002_remove_gamestate_current_pot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/routing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/css/font-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/face80x80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/pot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/total.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/transaction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/transactions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/dash-charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/dash-noty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/fullcalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/fullcalendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/gcal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/highcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/jquery-ui-1.8.23.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/jquery.flexslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/jquery.validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/lineandbars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/noty/jquery.noty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/js/noty/promise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/flexslider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/font-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/fullcalendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/fullcalendar.print.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/css/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/spinning.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_spinning.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/bg.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/down-small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/face.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/face36x36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/face80x80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/glyphicons-halflings-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/glyphicons-halflings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/logo30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/photo01.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/photo02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/photo03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/photo04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/sep-half.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/slide01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/slide02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/up-small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/user-avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/dash-charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/dash-noty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/fullcalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/fullcalendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/gcal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/highcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/jquery-ui-1.8.23.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/jquery.flexslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/jquery.validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/lineandbars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/noty/jquery.noty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/js/noty/promise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/stats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/nano_poker/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/autocomplete.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/changelists.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/responsive_rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/css/widgets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/fonts/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/fonts/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/calendar-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/gis/move_vertex_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/gis/move_vertex_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-addlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-alert.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-changelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-deletelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-no.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-unknown-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-unknown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-viewlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/icon-yes.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/inline-delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/selector-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/sorting-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/tooltag-add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/img/tooltag-arrowright.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/SelectBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/SelectFilter2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/actions.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/autocomplete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/cancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/change_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/collapse.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/inlines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/inlines.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/jquery.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/popup_response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/prepopulate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/prepopulate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/prepopulate_init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/timeparse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/urlify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/select2.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/css/font-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/images/face80x80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/images/free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/images/pot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/images/total.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/images/transaction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/images/transactions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/dash-charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/dash-noty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/fullcalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/fullcalendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/gcal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/highcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/jquery-ui-1.8.23.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/jquery.flexslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/jquery.validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/lineandbars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/noty/jquery.noty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NanoPoker/static/js/noty/promise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arduino_driver/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arduino_driver/connect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arduino_driver/websocket_wrapper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poker_template.json" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="consumers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/consumers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="handle_event.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/handle_event.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="websocket_wrapper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/arduino_driver/websocket_wrapper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/routing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <folding>
+                <element signature="e#15#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/routing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>N</find>
+      <find>channel_name</find>
+      <find>room_group_name</find>
+      <find>room_name</find>
+      <find>chat_message</find>
+      <find>chat-message-input</find>
+      <find>chat</find>
+      <find>month</find>
+      <find>pot</find>
+      <find>up</find>
+      <find>bett</find>
+      <find>bootstrap</find>
+      <find>src</find>
+      <find>href</find>
+      <find>currentpot</find>
+      <find>glow</find>
+      <find>current</find>
+      <find>roomName</find>
+      <find>totaltransfered</find>
+      <find>nano_poker</find>
+      <find>oncl</find>
+      <find>.post</find>
+      <find>receive</find>
+      <find>websocket</find>
+      <find>print</find>
+      <find>Event</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/read_input.py" />
+        <option value="$PROJECT_DIR$/device.py" />
+        <option value="$PROJECT_DIR$/token.py" />
+        <option value="$PROJECT_DIR$/on_tap_api.py" />
+        <option value="$PROJECT_DIR$/token_model.py" />
+        <option value="$PROJECT_DIR$/connect.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/NanoPoker/static/client.js" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/NanoPoker/asgi.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/routing.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/stats.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/NanoPoker/routing.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/NanoPoker/urls.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example/index.html" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/routing.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/views.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/stats.html" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/static/css/main.css" />
+        <option value="$PROJECT_DIR$/driver/websocket.py" />
+        <option value="$PROJECT_DIR$/driver/connect.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/urls.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/index.html" />
+        <option value="$PROJECT_DIR$/poker_template.json" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/NanoPoker/admin.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/admin.py" />
+        <option value="$PROJECT_DIR$/arduino_driver/connect.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/NanoPoker/settings.py" />
+        <option value="$PROJECT_DIR$/arduino_driver/websocket_wrapper.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/consumers.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/handle_event.py" />
+        <option value="$PROJECT_DIR$/app/NanoPoker/nano_poker/models.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="347" />
+    <option name="y" value="23" />
+    <option name="width" value="1151" />
+    <option name="height" value="957" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="nano_poker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="nano_poker" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="nano_poker" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="nano_poker" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="nano_poker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NanoPoker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NanoPoker" type="462c0819:PsiDirectoryNode" />
+              <item name="arduino_driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/NanoPoker/nano_poker" />
+      <recent name="$PROJECT_DIR$/app/NanoPoker/nano_poker/static" />
+      <recent name="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/images" />
+      <recent name="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example/images" />
+      <recent name="$PROJECT_DIR$/app/NanoPoker/NanoPoker" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/NanoPoker/NanoPoker" />
+      <recent name="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/images" />
+      <recent name="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker" />
+      <recent name="$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="971417ff-9896-4dfc-bb7d-2107a266b338" name="Default" comment="" />
+      <created>1587430998086</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587430998086</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="347" y="23" width="1151" height="957" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24955752" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.17084827" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24955752" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.17084827" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/NanoPoker/nano_poker/consumers.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/NanoPoker/nano_poker/consumers.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/NanoPoker/nano_poker/handle_event.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/token_model.py" />
+    <entry file="file://$PROJECT_DIR$/connect.py" />
+    <entry file="file://$PROJECT_DIR$/device.py" />
+    <entry file="file://$PROJECT_DIR$/on_tap_api.py" />
+    <entry file="file://$PROJECT_DIR$/token_model.py" />
+    <entry file="file://$PROJECT_DIR$/token_model.py" />
+    <entry file="file://$PROJECT_DIR$/device.py" />
+    <entry file="file://$PROJECT_DIR$/on_tap_api.py" />
+    <entry file="file://$PROJECT_DIR$/connect.py" />
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/static/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/asgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/view.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/driver/device.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/driver/on_tap_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/bootstrap/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/static/bootstrap/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/photo04.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/photo02.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/slide01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example/images/pot.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/font-awesome/scss/_icons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7585" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/tables.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/up.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/images/user-avatar.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/static/images/free.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/transactions.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/example theme/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="597" column="17" selection-start-line="597" selection-start-column="17" selection-end-line="597" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/common.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="858" lean-forward="true" selection-start-line="858" selection-end-line="858" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arduino_driver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/stats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/templates/nano_poker/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1006">
+          <caret line="68" column="68" lean-forward="true" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poker_template.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="648" column="1" selection-start-line="648" selection-start-column="1" selection-end-line="648" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arduino_driver/connect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arduino_driver/websocket_wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/consumers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/handle_event.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#15#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/nano_poker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/NanoPoker/NanoPoker/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
