@@ -1,7 +1,13 @@
 from django.db import models
 from django.conf import settings
+
+
 import requests
 import json
+from decimal import *
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class Account(models.Model):
@@ -17,12 +23,27 @@ class Account(models.Model):
 
     application_name = models.CharField(max_length=64, null=False)
 
+    def __str__(self):
+        return self.account_name
     @staticmethod
     def sync_account(account):
-        data = {"application_name": account.application_name, "account_name": account.account_name}
-        account_json = json.dumps(requests.post(settings.NANOTOKEN_ENDPOINT+"/action/accounts/get", data))
-        account.balance = account_json["fields"]["balance"]
-        account.address = account_json["fields"]["address"]
+        data = {"application": account.application_name, "account_name": account.account_name}
+        logger.info(settings.NANOTOKEN_ENDPOINT+"/action/account/get/balance")
+
+        response = requests.post(settings.NANOTOKEN_ENDPOINT+"/action/account/get/balance", json.dumps(data))
+        if response.status_code != 200:
+            logger.error("sync_account failed for account {0}".format(account.sync_account))
+        account_json = json.loads(response.text)
+        logger.info(account_json)
+
+        account.balance = Decimal(account_json["message"]["current_balance"])
+
+        response = requests.post(settings.NANOTOKEN_ENDPOINT + "/action/account/get/address", json.dumps(data))
+        if response.status_code != 200:
+            logger.error("sync_account failed for account {0}".format(account.sync_account))
+
+        account_json = json.loads(response.text)
+        account.address = account_json["message"]["address"]
         account.save()
 
     @staticmethod

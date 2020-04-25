@@ -2,9 +2,14 @@ import json
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 import random
+import logging
 
 from .models import Account
 from .models import GameState
+from .handle_event import Event
+
+logger = logging.getLogger(__name__)
+
 
 class MessageConsumer(WebsocketConsumer):
     def connect(self):
@@ -37,7 +42,6 @@ class MessageConsumer(WebsocketConsumer):
 
     def on_message(self, event):
         message = event['message']
-
         device = message["device"]
         token = message["token"]
         application = message["application"]
@@ -62,15 +66,15 @@ class MessageConsumer(WebsocketConsumer):
         }))
 
     def sync_data(self):
-        player_one_account, d = Account.objects.get_or_create(account_name="player_one")
-        player_two_account, d = Account.objects.get_or_create(account_name="player_two")
-        pot, d = Account.objects.get_or_create(account_name="pot")
+        player_one_account, d = Account.objects.get_or_create(account_name="Player One")
+        player_two_account, d = Account.objects.get_or_create(account_name="Player Two")
+        pot, d = Account.objects.get_or_create(account_name="Pot Account")
 
         Account.sync_account(player_one_account)
         Account.sync_account(player_two_account)
         Account.sync_account(pot)
 
-        game_state, d = GameState.objects.get_or_create(application_name="nano_poker")
+        game_state, d = GameState.objects.get_or_create(application_name="NanoPoker")
         self.send(text_data=json.dumps({
             'players': [Account.to_dict(player_one_account), Account.to_dict(player_two_account)],
             'currentpot': "{:0.2f}".format(pot.balance),

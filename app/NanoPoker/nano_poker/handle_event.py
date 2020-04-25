@@ -1,25 +1,28 @@
-from ..NanoPoker.settings import NANOTOKEN_ENDPOINT
+from django.conf import settings
+
+
 import requests
 import json
+import logging
 
 from .models import GameState
+
+logger = logging.getLogger(__name__)
 
 
 class Event:
 
-    device_to_player_map = {"device_one": "pot", "device_two": "player_one", "device_three": "player_two"}
-
-    def __init__(self, application_name, device_name, token_name):
+    def __init__(self, application, device_name, token_name):
         self.device_name = device_name
         self.token_name = token_name
-        self.application_name = application_name
+        self.application = application
+        self.device_to_player_map = {"device_one": "Pot", "device_two": "Player One", "device_three": "Player Two"}
 
     def update_gamestate_after_cashout(self):
-        game_state = GameState.objects.get(application_name="nano_poker")
+        game_state = GameState.objects.get(application_name=self.application)
         game_state.total_transactions += 1
 
-        past_actions = json.dumps(requests.post(NANOTOKEN_ENDPOINT + "/action/actionhistory/all", data=token_data))
-        print(past_actions)
+        past_actions = self.post_request("/action/actionhistory/all", token_data)
         ## sync accounts
 
         ## add new transaction
@@ -28,11 +31,10 @@ class Event:
         ## add new action
 
     def update_gamestate_after_bet(self):
-        game_state = GameState.objects.get(application_name="nano_poker")
+        game_state = GameState.objects.get(application_name=self.application)
         game_state.total_transactions += 1
 
-        past_actions = json.dumps(requests.post(NANOTOKEN_ENDPOINT + "/action/actionhistory/all", data=token_data))
-        print(past_actions)
+        self.post_request("/action/actionhistory/all", token_data)
         ## add to pot
         ## update account bet
 
@@ -44,20 +46,21 @@ class Event:
 
     def change_token_action_polices_bet(self):
         # after bet allow  send to any player
-        data = {'application': application, 'token_name': self.token_name}
-        token_data = json.loads(requests.post(NANOTOKEN_ENDPOINT+"/action/token/get", data=data))
+        data = {'application': self.application, 'token_name': self.token_name}
+
+        token_data = self.post_request("/action/token/get", data)
 
         token_data['action_polices'] = ["Allow Send from Pot"]
-        requests.post(NANOTOKEN_ENDPOINT+"/action/token/update", data=token_data)
+        self.post_request("/action/token/update", data)
 
     def change_token_action_polices_cash_out(self):
         # after cash out allow send only back to pot
-        data = {'application': application, 'token_name': self.token_name}
-        token_data = json.loads(requests.post(NANOTOKEN_ENDPOINT+"/action/token/get", data=data))
+        data = {'application': self.application, 'token_name': self.token_name}
 
-        token_data['action_polices'] = ["Allow Send to Pot from "+device_to_player_map[device_to_player_map]]
+        token_data = self.post_request("/action/token/get", data)
+        token_data['action_polices'] = ["Allow Send to Pot from "+self.device_to_player_map[self.device_name]]
 
-        requests.post(NANOTOKEN_ENDPOINT+"/action/token/update", data=token_data)
+        self.post_request("/action/token/update", token_data)
 
     def trigger_bet(self):
         self.trigger()
@@ -70,5 +73,17 @@ class Event:
         self.update_gamestate_after_bet()
 
     def trigger(self):
-        data = {"application_name": self.application_name, "token_name": self.token_name, "device_name": self.device_name}
-        requests.post(NANOTOKEN_ENDPOINT + "/action/execute", data=data)
+        data = {"application": self.application, "token_name": self.token_name, "device_name": self.device_to_player_map[self.device_name]}
+        self.post_request("/action/execute", data)
+
+    def post_request(self, path, data):
+        logger.info(path, json.dumps(data))
+
+        response = requests.post(settings.NANOTOKEN_ENDPOINT + path, data=json.dumps(data))
+        if response.status_code != 200:
+            logger.error("Post Failed")
+
+        body = json.loads(response.text)
+        logger.info(body)
+
+        return body
