@@ -7,6 +7,9 @@ import json
 from decimal import *
 import logging
 
+from .utils import *
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -17,7 +20,7 @@ class Account(models.Model):
 
     gains = models.DecimalField(default=0, decimal_places=16, max_digits=64)
 
-    address = models.CharField(max_length=64)
+    address = models.CharField(max_length=65)
 
     account_name = models.CharField(max_length=64)
 
@@ -28,22 +31,27 @@ class Account(models.Model):
     @staticmethod
     def sync_account(account):
         data = {"application": account.application_name, "account_name": account.account_name}
+        logger.info(data)
         logger.info(settings.NANOTOKEN_ENDPOINT+"/action/account/get/balance")
 
         response = requests.post(settings.NANOTOKEN_ENDPOINT+"/action/account/get/balance", json.dumps(data))
         if response.status_code != 200:
-            logger.error("sync_account failed for account {0}".format(account.sync_account))
+            logger.error("sync_account failed for account {0}".format(account.account_name))
+
         account_json = json.loads(response.text)
         logger.info(account_json)
 
-        account.balance = Decimal(account_json["message"]["current_balance"])
-
+        account.balance = convert_raw_to_NANO(Decimal(account_json["message"]["current_balance"]))
+        logger.info(data)
+        logger.info(settings.NANOTOKEN_ENDPOINT + "/action/account/get/address")
         response = requests.post(settings.NANOTOKEN_ENDPOINT + "/action/account/get/address", json.dumps(data))
+
         if response.status_code != 200:
-            logger.error("sync_account failed for account {0}".format(account.sync_account))
+            logger.error("sync_account failed for account {0}".format(account.account_name))
 
         account_json = json.loads(response.text)
         account.address = account_json["message"]["address"]
+        logger.info(account_json)
         account.save()
 
     @staticmethod
@@ -57,9 +65,9 @@ class Account(models.Model):
 
 
 class Action(models.Model):
-    action_name = models.CharField(max_length=64)
+    action_name = models.CharField(max_length=64, null=True)
 
-    policy_name = models.CharField(max_length=64)
+    policy_name = models.CharField(max_length=64, null=True)
 
     executed_time = models.DateTimeField(default=None, null=True)
 
@@ -67,15 +75,23 @@ class Action(models.Model):
 
 
 class Transaction(models.Model):
-    to_account = models.CharField(max_length=64)
+    origin = models.CharField(max_length=65, null=True)
 
-    from_account = models.CharField(max_length=64)
+    destination = models.CharField(max_length=65, null=True)
+
+    timestamp = models.BigIntegerField(null=True, default=None)
 
     amount = models.DecimalField(default=0, decimal_places=16, max_digits=64)
 
-    application_name = models.CharField(max_length=64, null=False)
+    transaction_hash_sending = models.CharField(max_length=64)
 
-    executed_time = models.DateTimeField(default=None, null=True)
+    transaction_hash_receiving = models.CharField(max_length=64)
+
+    application = models.CharField(max_length=64)
+
+    complete = models.NullBooleanField(default=False, null=True)
+
+    error = models.CharField(max_length=265, default=None, null=True)
 
 
 class GameState(models.Model):

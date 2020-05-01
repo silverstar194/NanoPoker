@@ -119,7 +119,7 @@ LOGGING = {
         'verbose': {
             'format': '{levelname} {asctime} {message}',
             'style': '{',
-            'datefmt': '%Y-%m-%d %H:%M',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
         },
     },
     'handlers': {
@@ -146,7 +146,7 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
-        'token_api': {
+        'nano_poker': {
             'handlers': ['application'],
             'level': 'DEBUG',
             'propagate': True,
