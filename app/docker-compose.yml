@@ -1,0 +1,35 @@
+version: "2"
+services:
+  nginx:
+    image: nginx:latest
+    container_name: ng02
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./NanoPoker:/NanoPoker
+      - ./NanoPoker/static:/static
+      - ./config/nginx:/etc/nginx/conf.d
+    depends_on:
+      - web
+  web:
+    build: .
+    container_name: dg02
+    command: bash -c "python /NanoPoker/manage.py makemigrations nano_poker && python /NanoPoker/manage.py migrate && python /NanoPoker/manage.py collectstatic --noinput && gunicorn NanoPoker.wsgi --chdir /NanoPoker --log-level=debug --timeout=30 --workers=4 --bind=0.0.0.0:8001"
+    environment:
+      - ST__DEVELOPER_MODE=False
+    env_file:
+      - django.env
+    depends_on:
+      - db
+    volumes:
+      - ./NanoPoker:/NanoPoker
+      - ./NanoPoker/static:/static
+    expose:
+      - "8001"
+
+  db:
+    image: postgres:latest
+    container_name: ps02
+    environment:
+      POSTGRES_DB: "db"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
