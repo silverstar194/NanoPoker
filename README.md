@@ -7,7 +7,8 @@ If you're unfamilar with [Nano On Tap](https://github.com/silverstar194/NanoOnTa
 ### Prerequisites
 * Docker
 * [Nano Node](https://docs.nano.org/running-a-node/node-setup/)
-* [PoW Provider](https://nanocenter.org/projects/dpow) 
+* [PoW Provider](https://nanocenter.org/projects/dpow)
+* [Hardware and NanoOnTap Setup](https://github.com/silverstar194/NanoPoker/wiki)
 
 ### Docker usage 
 The provided production/example stack is dockerized and includes:
@@ -36,27 +37,5 @@ docker exec -it $(docker inspect --format="{{.Id}}" dg02) python /NanoPoker/mana
 
 6. Restart the docker container to bootstrap the Nano Wallet and Nano Accounts from Nano Node. This automaticlly creates a new wallet and needed accounts on the Node.
 
-## Flow State Definition
-### Json Template
-
-## Flow State Reprograming
-
-## NFC Hardware Setup
-See the Medium article for hardware setup. TODO
-
-### Audrino
-### NFC Stickers
-### NFC Readers
-
-### Bare Bones Architecture
-
-### Sources
-[Dumping NFC Tag Information](https://playground.arduino.cc/Learning/MFRC522/)
-
-[MFRC-522 Circuit Layout](https://randomnerdtutorials.com/security-access-using-mfrc522-rfid-reader-with-arduino/)
-
-### Shopping List
-https://www.amazon.com/gp/product/B002KL8J8W/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1
-https://www.amazon.com/gp/product/B0775XQXRB/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1
-https://www.amazon.com/gp/product/B01IB7UOFE/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1
-https://www.amazon.com/gp/product/B07WD326SN/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
+## Wiki
+Please see wiki for more [information and guides.](https://github.com/silverstar194/NanoPoker/wiki)
